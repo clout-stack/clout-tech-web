@@ -1,0 +1,42 @@
+{
+  "name": "clout-tech-web",
+  "version": "0.0.1",
+  "description": "Web application for clout.tech",
+  "main": "app.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "grunt test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/clout-stack/clout-tech-web"
+  },
+  "keywords": [
+    "food",
+    "sharing"
+  ],
+  "author": "Muhammad Dadu",
+  "license": "ISC",
+  "dependencies": {
+    "async": "^1.5.2",
+    "clout-js": "*",
+    "debug": "^2.2.0",
+    "express-partials": "^0.3.0",
+    "lodash": "^4.6.1",
+    "marked": "^0.3.5",
+    "node-mailjet": "^1.1.0",
+    "promise": "^7.1.1"
+  },
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-concurrent": "^2.3.0",
+    "grunt-contrib-sass": "^1.0.0",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-mocha-test": "^0.12.7",
+    "grunt-nodemon": "^0.4.2",
+    "load-grunt-tasks": "^3.5.0",
+    "mocha": "^2.4.5"
+  }
+}

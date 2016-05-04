@@ -1,0 +1,18 @@
+/**
+ * Default css
+ */
+$gray: #ADADAD;
+$lightGray: #E8E8E8;
+
+@import url(//fonts.googleapis.com/css?family=Lato:400,300,300italic);
+@import url(//fonts.googleapis.com/css?family=Great+Vibes);
+* { font-family: 'Lato', sans-serif; }
+.clear { clear: both; height:0px; }
+
+hr { border-top: 1px solid $lightGray; }
+footer {
+	border-top: 1px solid $lightGray;
+	margin-top: 20px;
+	padding: 10px 0px;
+}
+footer span { color: $gray; }
