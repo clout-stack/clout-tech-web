@@ -12,22 +12,6 @@ module.exports = function(grunt) {
                 src: ['test/**/*.js']
             }
         },
-	    // Watch task config
-	    watch: {
-	      sass: {
-	        files: "public/scss/*.scss",
-	        tasks: ['sass']
-	      }
-	    },
-	    // SASS task config
-	    sass: {
-	        dev: {
-	            files: {
-	                "public/css/default.css" : "public/scss/default.scss",
-	                "public/css/home.css" : "public/scss/home.scss"
-	            }
-	        }
-	    },
 	    // Nodemon
 		nodemon: {
 			dev: {
@@ -36,13 +20,7 @@ module.exports = function(grunt) {
 					ignore: ['Gruntfile.js', 'test/**', 'public/**', 'logs/**', 'views/**']
 				}
 			}
-		},
-		concurrent: {
-	        dev: ['watch', 'nodemon'],
-            options: {
-                logConcurrentOutput: true
-            }
-	    }
+		}
     });
 
     grunt.loadNpmTasks('grunt-mocha-test');
@@ -51,5 +29,5 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-nodemon');
 
 	grunt.registerTask('test', 'mochaTest');
-	grunt.registerTask('start', ['concurrent:dev']);
+	grunt.registerTask('start', ['nodemon']);
 };
