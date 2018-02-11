@@ -4,7 +4,7 @@
   "description": "Web application for clout.tech",
   "main": "app.js",
   "scripts": {
-    "start": "grunt start",
+    "start": "node .",
     "test": "grunt test"
   },
   "repository": {
@@ -43,7 +43,6 @@
     "grunt-contrib-sass": "^1.0.0",
     "grunt-contrib-watch": "^1.0.0",
     "grunt-mocha-test": "^0.12.7",
-    "grunt-nodemon": "^0.4.2",
     "html-webpack-plugin": "^2.30.1",
     "load-grunt-tasks": "^3.5.0",
     "mocha": "^2.4.5",

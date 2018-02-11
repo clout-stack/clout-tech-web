@@ -8,6 +8,7 @@ const webpack = require('webpack');
 const express = require('express');
 const path = require('path');
 const fs = require('fs');
+const {merge} = require('lodash');
 
 module.exports = {
 	webpack: {
@@ -15,6 +16,7 @@ module.exports = {
 		priority: 'CONTROLLER',
 		fn: function (next) {
 			let cloutWebpack = new CloutWebpack(this);
+			console.log('building webpack');
 			cloutWebpack.startHook()
 				.then(() => next())
 				.catch((error) => next(error));
@@ -70,7 +72,8 @@ class CloutWebpack {
 		})
 		.then(() => {
 			this.clout.app.use(express.static(this.compiler.outputPath));
-			this.clout.app.use('*', express.static(this.compiler.outputPath));
+			// TODO:- create router for the react. Tap-into react router? bridge webpack and set paths?
+			// this.clout.app.use('*', express.static(this.compiler.outputPath));
 		});
 	}
 
