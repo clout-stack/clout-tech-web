@@ -13,3 +13,5 @@ function createAction(actionType) {
 }
 
 export const setStyle = createAction(headerActions.SET_STYLE);
+export const toggleInfo = createAction(headerActions.TOGGLE_INFO);
+

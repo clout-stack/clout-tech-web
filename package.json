@@ -27,6 +27,7 @@
     "node-mailjet": "^3.2.1"
   },
   "devDependencies": {
+    "animate.css": "^3.6.1",
     "autoprefixer": "^7.2.6",
     "axios": "^0.17.1",
     "babel-core": "^6.26.0",
